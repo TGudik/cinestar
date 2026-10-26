@@ -1,3 +1,18 @@
+import Hero from "../components/hero/Hero";
+import heroImg from "../assets/studio.jpg"
+
 export default function Blog() {
-    return <h1>Blog</h1>
+    return (
+        <div>
+            <Hero 
+                variant="page"
+                image={heroImg}
+                title="BLOG ARKIV"
+                breadcrumbs={[{label: "Forside", to: "/"}, {label: "BLOG ARKIV"}]}
+            />
+            <main>
+
+            </main>
+        </div>
+    )
 }
