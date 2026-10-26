@@ -1,0 +1,13 @@
+.eyebrow {
+    color: #F07232;
+    font-family: var(--body);
+    font-size: clamp(20px, calc(12.727px + 2.273vw), 40px);
+    font-weight: 700;
+}
+
+.title {
+    font-family: var(--heading);
+    font-size: clamp(32px, calc(27.818px + 0.686vw), 36px);
+    color: white;
+    white-space: pre-wrap;
+}

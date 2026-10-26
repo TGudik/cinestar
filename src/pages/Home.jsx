@@ -1,6 +1,7 @@
 import Hero from "../components/hero/Hero";
 import heroImg from "../assets/studio.jpg"
 import StudioSection from "../components/studioSection/StudioSection";
+import Portfolio from "../components/portfolio/Portfolio";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
         />
         <main>
             <StudioSection />
+            <Portfolio />
         </main>
       </div>
     );

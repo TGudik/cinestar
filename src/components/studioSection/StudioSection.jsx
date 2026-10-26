@@ -2,6 +2,7 @@ import styles from "./studioSection.module.css"
 import thumbnail from "../../assets/studio3.jpg"
 import video from "../../assets/aboutVideo.mp4"
 import { useRef, useState } from "react";
+import SectionHeader from "../sectionHeader/SectionHeader";
 
 export default function StudioSection() {
     const videoRef = useRef(null);
@@ -20,8 +21,10 @@ export default function StudioSection() {
     return (
       <div className={styles.wrapper}>
         <div className={styles.content}>
-          <h2 className={styles.eyebrow}>CINESTAR STUDIO</h2>
-          <h3 className={styles.title}>HAR DU EN IDE TIL DIT NÆSTE PROJEKT?</h3>
+          <SectionHeader
+            eyebrow={"CINESTAR STUDIO"}
+            title={"HAR DU EN IDE TIL DIT NÆSTE PROJEKT?"}
+          />
           <p className={styles.body}>
             Lad os omsætte dine visioner til levende billeder, der fænger dit
             publikum. Hos os får du en professionel, kreativ proces fra
@@ -54,12 +57,12 @@ export default function StudioSection() {
           </p>
           <div className={styles.statWrapper}>
             <div className={styles.stat}>
-                <p className={styles.statValue}>250+</p>
-                <p className={styles.statKey}>FILM PRODUKTION</p>
+              <p className={styles.statValue}>250+</p>
+              <p className={styles.statKey}>FILM PRODUKTION</p>
             </div>
             <div className={styles.stat}>
-                <p className={styles.statValue}>78+</p>
-                <p className={styles.statKey}>MUSIK VIDEO</p>
+              <p className={styles.statValue}>78+</p>
+              <p className={styles.statKey}>MUSIK VIDEO</p>
             </div>
           </div>
         </div>

@@ -12,18 +12,8 @@
     margin: 0 auto;
 }
 
-.eyebrow, .body {
-    color: #F07232;
-    font-family: var(--body);
-    font-size: clamp(20px, calc(12.727px + 2.273vw), 40px);
-    font-weight: 700;
-}
-
-.title {
-    font-family: var(--heading);
-    font-size: clamp(30px, calc(27.818px + 0.682vw), 36px);
-}
 .body {
+    font-family: var(--body);
     color: white;
     font-weight: 500;
     font-size: clamp(20px, calc(14.182px + 1.818vw), 36px);
