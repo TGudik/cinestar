@@ -18,7 +18,7 @@
 }
 
 .home {
-  min-height: 50vh;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -132,14 +132,15 @@
     }
 
     .awards {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
         flex-direction: row;
         justify-content: center;
-        padding-top: 0;
-        transform: translateY(-100%);
-        z-index: 1;
         background: none;
+        z-index: 1;
         gap: 10px;
-        margin: 10px 0;
 
         img {
             max-width: 250px;
