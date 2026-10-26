@@ -1,0 +1,132 @@
+.navContainer {
+    width: 100%;
+    position: fixed;
+    padding: 20px 30px;
+    background-color: black;
+    backdrop-filter: blur(10px);
+}
+
+.navContent {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100dvw;
+    height: 100dvh;
+    background-color: black;
+
+    display: grid;
+    place-content: center;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+      transform 0.45s ease,
+      opacity 0.3s ease;
+  }
+
+  .open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+}
+
+.burger { 
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    .bar:nth-child(2) {
+        transform: translateX(10px);
+    }
+
+    @media (max-width: 700px) {
+        display: flex;
+        
+        .bar {
+            width: 25px;
+            height: 4px;
+            background-color: #F07232;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+        
+        &.open {
+            display: flex;
+            transform: translateX(6px);
+            
+            .bar:nth-child(1) {
+                transform: rotate(45deg)
+                translateY(6.6px);
+            }
+            .bar:nth-child(2) {
+                display: none;
+            }
+            .bar:nth-child(3) {
+                transform: rotate(-45deg)
+                translateY(-6.6px)
+            }
+        }
+    }
+}
+
+
+
+
+.navLink {
+    color: white;
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 3px;
+    position: relative;
+}
+
+.navLink.active {
+    color: #F07232;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: #F07232;
+
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    @media (min-width: 900px) {
+        width: 100%;
+    }
+}
+
+.logoImg{
+    position: relative;
+    z-index: -2;
+    height: 45px;
+}
