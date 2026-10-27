@@ -10,9 +10,9 @@ const imageArray = [
 ]
 
 export default function Portfolio() {
-    const [index, setIndex] = useState(0)
-    const [before, setBefore] = useState(2)
-    const [after, setAfter] = useState(1)
+    const [index, setIndex] = useState(1)
+    const [before, setBefore] = useState(0)
+    const [after, setAfter] = useState(2)
 
 
     function prevIndex() {
@@ -30,7 +30,7 @@ export default function Portfolio() {
     function goToIndex(i) {
         setIndex(i)
         setBefore(i === 0 ? imageArray.length - 1 : i - 1)
-        setAfter(i === 2 ? 0 : i + 1)
+        setAfter(i === imageArray.length - 1 ? 0 : i + 1)
     } 
 
     useEffect(() => {

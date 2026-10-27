@@ -3,6 +3,7 @@ import heroImg from "../assets/studio.jpg"
 import StudioSection from "../components/studioSection/StudioSection";
 import Portfolio from "../components/portfolio/Portfolio";
 import ServiceSection from "../components/serviceSection/ServiceSection";
+import HistorySection from "../components/historySection/HistorySection";
 
 export default function Home() {
     return (
@@ -19,6 +20,7 @@ export default function Home() {
             <StudioSection />
             <Portfolio />
             <ServiceSection />
+            <HistorySection />
         </main>
       </div>
     );
