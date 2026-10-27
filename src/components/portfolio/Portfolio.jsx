@@ -27,6 +27,12 @@ export default function Portfolio() {
         setAfter((prev) => (prev === imageArray.length - 1 ? prev = 0 : prev + 1))
     }
 
+    function goToIndex(i) {
+        setIndex(i)
+        setBefore(i === 0 ? imageArray.length - 1 : i - 1)
+        setAfter(i === 2 ? 0 : i + 1)
+    } 
+
     useEffect(() => {
         const id = setTimeout(nextIndex, 4000)
         return () => clearTimeout(id)
@@ -39,10 +45,22 @@ export default function Portfolio() {
         </div>
         <div className={styles.sliderWrapper}>
           <div className={styles.beforeNafter}>
-            <img src={imageArray[before]} alt="Cinestar film projekt" className={styles.bgSliderImg} />
-            <img src={imageArray[after]} alt="Cinestar film projekt" className={styles.bgSliderImg} />
+            <img
+              src={imageArray[before]}
+              alt="Cinestar film projekt"
+              className={styles.bgSliderImg}
+            />
+            <img
+              src={imageArray[after]}
+              alt="Cinestar film projekt"
+              className={styles.bgSliderImg}
+            />
           </div>
-          <img className={styles.sliderImg} src={imageArray[index]} alt="Cinestar film projekt" />
+          <img
+            className={styles.sliderImg}
+            src={imageArray[index]}
+            alt="Cinestar film projekt"
+          />
           <div className={styles.sliderBtns}>
             <button onClick={prevIndex} className={styles.sliderBtn}>
               {String.fromCharCode(8592)}
@@ -52,17 +70,26 @@ export default function Portfolio() {
             </button>
           </div>
           <div className={styles.sliderDots}>
-            <div className={`${styles.dot} ${index === 0 && styles.active}`}></div>
-            <div className={`${styles.dot} ${index === 1 && styles.active}`}></div>
-            <div className={`${styles.dot} ${index === 2 && styles.active}`}></div>
+            <div
+              onClick={() => goToIndex(0)}
+              className={`${styles.dot} ${index === 0 && styles.active}`}
+            ></div>
+            <div
+              onClick={() => goToIndex(1)}
+              className={`${styles.dot} ${index === 1 && styles.active}`}
+            ></div>
+            <div
+              onClick={() => goToIndex(2)}
+              className={`${styles.dot} ${index === 2 && styles.active}`}
+            ></div>
           </div>
         </div>
         <p className={styles.body}>
           Her præsenterer vi et udvalg af de produktioner, vi er stolte af at
-          have skabt. <br/> Hvert projekt fortæller sin unikke historie og illustrerer
-          vores ambition om at levere høj kvalitet, originalitet og visuel
-          gennemslagskraft. <br/> Gå på opdagelse, og lad dig inspirere af vores
-          arbejde.
+          have skabt. <br /> Hvert projekt fortæller sin unikke historie og
+          illustrerer vores ambition om at levere høj kvalitet, originalitet og
+          visuel gennemslagskraft. <br /> Gå på opdagelse, og lad dig inspirere
+          af vores arbejde.
         </p>
       </div>
     );
