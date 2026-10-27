@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoPlay from "embla-carousel-autoplay";
 
+const images = [image1, image2, image3];
+
 export default function Portfolio() {
   const [active, setActive] = useState(0);
 
@@ -46,6 +48,14 @@ export default function Portfolio() {
     emblaApi?.plugins().autoplay?.reset();
   }
 
+  function getPosition(index) {
+  const count = images.length;
+
+  if (index === (active + 1) % count) return styles.next;
+  if (index === (active - 1 + count) % count) return styles.prev;
+  return "";
+}
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.headerWrapper}>
@@ -54,40 +64,22 @@ export default function Portfolio() {
       <div className={styles.carouselWrapper}>
         <div className={styles.sliderWrapper} ref={emblaRef}>
           <div className={styles.imgWrapper}>
-            <div className={styles.slideWrapper}>
-              <img
-                src={image1}
-                alt="Cinestar projekt"
-                className={`${styles.sliderImg} ${active === 0 && styles.active}`}
-              />
-            </div>
-            <div className={styles.slideWrapper}>
-              <img
-                src={image2}
-                alt="Cinestar projekt"
-                className={`${styles.sliderImg} ${active === 1 && styles.active}`}
-              />
-            </div>
-            <div className={styles.slideWrapper}>
-              <img
-                src={image3}
-                alt="Cinestar projekt"
-                className={`${styles.sliderImg} ${active === 2 && styles.active}`}
-              />
-            </div>
+            {images.map((image, index) => (
+              <div className={`${styles.slideWrapper}  ${getPosition(index)}`} key={index}>
+                <img
+                  src={image}
+                  alt="Cinestar projekt"
+                  className={`${styles.sliderImg} ${active === index ? styles.active : getPosition(index)}`}
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.btns}>
-          <button
-            className={styles.sliderBtn}
-            onClick={goLast}
-          >
+          <button className={styles.sliderBtn} onClick={goLast}>
             {String.fromCharCode(8592)}
           </button>
-          <button
-            className={styles.sliderBtn}
-            onClick={goNext}
-          >
+          <button className={styles.sliderBtn} onClick={goNext}>
             {String.fromCharCode(8594)}
           </button>
         </div>
