@@ -21,6 +21,11 @@
     opacity: 1;
 }
 
+.starWrapper {
+    display: flex;
+    gap: 5px;
+}
+
 .testBody {
     font-family: var(--body);
     font-weight: 400;
