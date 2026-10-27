@@ -17,3 +17,13 @@
     font-size: clamp(32px, calc(27.818px + 0.686vw), 36px);
     color: white;
 }
+
+.body {
+    font-family: var(--body);
+    color: white;
+    font-weight: 500;
+    font-size: clamp(20px, calc(14.182px + 1.818vw), 36px);
+    line-height: clamp(27px, calc(21.545px + 1.705vw), 42px);
+    padding: 10px 0;
+    
+}

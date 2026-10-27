@@ -11,14 +11,8 @@ export default function TestimonialsSection() {
             centered
             eyebrow={"UDTALELSER"}
             title={"HVAD SIGER VORES SAMARBEJDSPARTNERE OM OS?"}
+            body={"“Cinestar er en fantastisk samarbejdspartner, der formår at kombinere kreativitet med professionalisme. Deres evne til at skabe unikke og engagerende produktioner er imponerende, og resultatet taler altid for sig selv.”"}
           />
-          <p className={styles.body}>
-            “Cinestar er
-            en fantastisk samarbejdspartner, der formår at kombinere kreativitet
-            med professionalisme. Deres evne til at skabe unikke og engagerende
-            produktioner er imponerende, og resultatet taler altid for sig
-            selv.”
-          </p>
         </div>
         <div className={styles.carouselWrapper}>
             <TestimonialCarousel />

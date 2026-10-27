@@ -24,12 +24,8 @@ export default function StudioSection() {
           <SectionHeader
             eyebrow={"CINESTAR STUDIO"}
             title={"HAR DU EN IDE TIL DIT NÆSTE PROJEKT?"}
+            body={"Lad os omsætte dine visioner til levende billeder, der fænger dit publikum. Hos os får du en professionel, kreativ proces fra idéudvikling til færdig produktion."}
           />
-          <p className={styles.body}>
-            Lad os omsætte dine visioner til levende billeder, der fænger dit
-            publikum. Hos os får du en professionel, kreativ proces fra
-            idéudvikling til færdig produktion.
-          </p>
           <div className={styles.videoWrapper}>
             <video
               onClick={playPause}
