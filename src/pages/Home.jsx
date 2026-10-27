@@ -2,6 +2,7 @@ import Hero from "../components/hero/Hero";
 import heroImg from "../assets/studio.jpg"
 import StudioSection from "../components/studioSection/StudioSection";
 import Portfolio from "../components/portfolio/Portfolio";
+import ServiceSection from "../components/serviceSection/ServiceSection";
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
         <main>
             <StudioSection />
             <Portfolio />
+            <ServiceSection />
         </main>
       </div>
     );
