@@ -86,10 +86,11 @@ export default function Portfolio() {
         </div>
         <p className={styles.body}>
           Her præsenterer vi et udvalg af de produktioner, vi er stolte af at
-          have skabt. <br /> Hvert projekt fortæller sin unikke historie og
-          illustrerer vores ambition om at levere høj kvalitet, originalitet og
-          visuel gennemslagskraft. <br /> Gå på opdagelse, og lad dig inspirere
-          af vores arbejde.
+          have skabt. <br />
+          <br /> Hvert projekt fortæller sin unikke historie og illustrerer
+          vores ambition om at levere høj kvalitet, originalitet og visuel
+          gennemslagskraft. <br />
+          <br /> Gå på opdagelse, og lad dig inspirere af vores arbejde.
         </p>
       </div>
     );
