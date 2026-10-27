@@ -1,0 +1,20 @@
+.wrapper {
+    background: #000;
+    padding: 80px 0;
+}
+
+.headerWrapper {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.body {
+    color: white;
+    font-family: var(--body);
+    margin: 30px 0;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: clamp(18px, calc(14.88px + 0.8vw), 24px);
+    text-align: center;
+}

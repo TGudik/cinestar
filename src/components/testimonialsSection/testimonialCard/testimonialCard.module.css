@@ -1,0 +1,60 @@
+.wrapper {
+    flex: 0 0 72%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+.content {
+    padding: 10px;
+    background: #99999940;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    scale: 0.85;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+.wrapper.active .content {
+    scale: 1;
+    opacity: 1;
+}
+
+.testBody {
+    font-family: var(--body);
+    font-weight: 400;
+    font-size: clamp(14px, calc(10.88px + 0.8vw), 20px);
+    line-height: 160%;
+    max-width: 400px;
+    margin: 12px 0;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    color: #F07232;
+    font-family: var(--heading);
+    font-size: clamp(16px, calc(12.88px + 0.8vw), 22px);
+    font-weight: 700;
+}
+
+.position {
+    font-family: var(--body);
+    font-size: clamp(10px, calc(7.92px + 0.533vw), 14px);
+    font-weight: 500;
+}
+
+.iconWrapper {
+    font-size: clamp(18px, calc(10.72px + 1.867vw), 32px);
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+        flex: 0 0 33.333%
+    }
+}

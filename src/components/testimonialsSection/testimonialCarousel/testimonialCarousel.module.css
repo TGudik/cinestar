@@ -1,0 +1,29 @@
+.wrapper {
+    color: white;
+}
+
+.viewport {
+    overflow: hidden;
+}
+
+.cardWrapper {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+}
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.btnWrapper button {
+    background: none;
+    color: #F07232;
+    font-size: 20px;
+    border: 1px solid #F07232;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
