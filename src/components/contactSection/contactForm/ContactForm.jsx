@@ -51,28 +51,76 @@ export default function ContactForm() {
     return (
       <div className={styles.wrapper}>
         <ContactInfo />
-        <SuccessScreen name={name} show={show} onClose={onClose}/>
-        <form noValidate className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.inputsWrapper}>
-                <div className={styles.inputWrapper}>
-                    <input {...register("name")} type="text" placeholder="Navn" className={styles.input} defaultValue={""}/>
-                    {errors.name && <p className={styles.error}>{errors.name.message}</p>}
-                </div>
-                <div className={styles.inputWrapper}>
-                    <input {...register("email")} type="text" placeholder="Email" className={styles.input} defaultValue={""}/>
-                    {errors.email && <p className={styles.error}>{errors.email.message}</p>}
-                </div>
-                <div className={styles.inputWrapper}>
-                    <input {...register("subject")} type="text" placeholder="Emne" className={styles.input} defaultValue={""}/>
-                    {errors.subject && <p className={styles.error}>{errors.subject.message}</p>}
-                </div>
+        <SuccessScreen
+          title={"Tak for din besked"}
+          message={"Vi bestræber os på at kontakte dig via din email indenfor 24 timer"}
+          name={name}
+          show={show}
+          onClose={onClose}
+        />
+        <form
+          noValidate
+          className={styles.form}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className={styles.inputsWrapper}>
+            <div className={styles.inputWrapper}>
+              <input
+                {...register("name")}
+                type="text"
+                placeholder="Navn"
+                className={styles.input}
+                defaultValue={""}
+              />
+              {errors.name && (
+                <p className={styles.error}>{errors.name.message}</p>
+              )}
             </div>
-            <div className={styles.textareaWrapper}>
-                <textarea rows={6} {...register("description")} placeholder="Besked" defaultValue="" className={styles.textarea}></textarea>
-                {errors.message && <p className={styles.error}>{errors.description.message}</p>}
+            <div className={styles.inputWrapper}>
+              <input
+                {...register("email")}
+                type="text"
+                placeholder="Email"
+                className={styles.input}
+                defaultValue={""}
+              />
+              {errors.email && (
+                <p className={styles.error}>{errors.email.message}</p>
+              )}
             </div>
-            <button className={styles.submitBtn} disabled={isSubmitting} type="submit">{isSubmitting ? "Sender besked..." : "Send Besked"}</button>
-            {errors.root && <p className={styles.error}>{errors.root.message}</p>}
+            <div className={styles.inputWrapper}>
+              <input
+                {...register("subject")}
+                type="text"
+                placeholder="Emne"
+                className={styles.input}
+                defaultValue={""}
+              />
+              {errors.subject && (
+                <p className={styles.error}>{errors.subject.message}</p>
+              )}
+            </div>
+          </div>
+          <div className={styles.textareaWrapper}>
+            <textarea
+              rows={6}
+              {...register("description")}
+              placeholder="Besked"
+              defaultValue=""
+              className={styles.textarea}
+            ></textarea>
+            {errors.message && (
+              <p className={styles.error}>{errors.description.message}</p>
+            )}
+          </div>
+          <button
+            className={styles.submitBtn}
+            disabled={isSubmitting}
+            type="submit"
+          >
+            {isSubmitting ? "Sender besked..." : "Send Besked"}
+          </button>
+          {errors.root && <p className={styles.error}>{errors.root.message}</p>}
         </form>
       </div>
     );

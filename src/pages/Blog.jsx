@@ -1,6 +1,7 @@
 import Hero from "../components/hero/Hero";
 import heroImg from "../assets/studio.jpg"
 import BlogList from "../components/blogComponents/blogList/BlogList";
+import NewsLetter from "../components/newsLetterSection/NewsLetter";
 
 export default function Blog() {
     return (
@@ -13,6 +14,7 @@ export default function Blog() {
             />
             <main>
                 <BlogList />
+                <NewsLetter />
             </main>
         </div>
     )
