@@ -7,6 +7,7 @@ import HistorySection from "../components/historySection/HistorySection";
 import TestimonialsSection from "../components/testimonialsSection/TestimonialsSection";
 import ContactSection from "../components/contactSection/ContactSection";
 import LatestBlogSection from "../components/blogComponents/latestBlogSection/LatestBlogSection";
+import SomeSection from "../components/someSection/SomeSection";
 
 export default function Home() {
     return (
@@ -27,6 +28,7 @@ export default function Home() {
             <TestimonialsSection />
             <ContactSection />
             <LatestBlogSection />
+            <SomeSection />
         </main>
       </div>
     );
