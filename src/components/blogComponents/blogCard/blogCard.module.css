@@ -1,0 +1,49 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    color: white;
+    font-family: var(--body);
+}
+
+
+
+.blogImg {
+    width: 100%;
+}
+
+.textContent {
+    padding: 20px;
+}
+
+.blogTitle {
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.blogText {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.created {
+    padding: 10px;
+}
+
+@media (min-width: 900px) {
+
+    .wrapper {
+        align-items: center;
+    }
+
+    .blogImg {
+        width: 100vw;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+}

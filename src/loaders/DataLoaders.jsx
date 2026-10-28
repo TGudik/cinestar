@@ -8,12 +8,22 @@ const reviewsLoader = async () => {
     return data
 }
 
+const blogsLoader = async () => {
+    const res = await fetch(`${apiUrl}/blogs`)
+    if (!res.ok) throw new Response("Fejl i at hente retter", {status: res.status})
+    const preData = await res.json()
+    const data = preData.data
+    return data
+}
+
 export const homeLoader = async () => {
-    const [reviews] = await Promise.all([
-        reviewsLoader()
+    const [reviews, blogs] = await Promise.all([
+        reviewsLoader(),
+        blogsLoader()
     ])
 
     return {
-        reviews
+        reviews,
+        blogs
     }
 }

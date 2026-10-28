@@ -2,7 +2,8 @@
 
 :root {
     --heading: "Cormorant";
-    --body: "Quicksand"
+    --body: "Quicksand";
+    --accent: #F07232;
 }
 
 * {
