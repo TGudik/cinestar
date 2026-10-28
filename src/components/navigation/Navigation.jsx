@@ -31,6 +31,10 @@ export default function Navigation() {
                 className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/blogs">
                   BLOG
                 </NavLink>
+                <NavLink 
+                className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/kontakt">
+                  KONTAKT
+                </NavLink>
               </nav>
             </div>
 
