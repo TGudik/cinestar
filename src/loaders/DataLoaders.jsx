@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3042"
+const apiUrl = "http://localhost:3042";
 
 const reviewsLoader = async () => {
     const res = await fetch(`${apiUrl}/reviews`)
@@ -16,6 +16,8 @@ const blogsLoader = async () => {
     return data
 }
 
+
+
 export const homeLoader = async () => {
     const [reviews, blogs] = await Promise.all([
         reviewsLoader(),
@@ -27,3 +29,22 @@ export const homeLoader = async () => {
         blogs
     }
 }
+
+export const blogLoader = async () => {
+    const [blogs] = await Promise.all([
+        blogsLoader()
+    ])
+
+    return {
+        blogs
+    }
+}
+
+export const blogById = async ({ params }) => {
+  const res = await fetch(`${apiUrl}/blog/${params.id}`);
+  if (!res.ok)
+    throw new Response("Fejl i at hente blog fra id", { status: res.status });
+  const preData = await res.json();
+  const data = preData.data;
+  return data;
+}; 

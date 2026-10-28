@@ -1,5 +1,6 @@
 import Hero from "../components/hero/Hero";
 import heroImg from "../assets/studio.jpg"
+import BlogList from "../components/blogComponents/blogList/BlogList";
 
 export default function Blog() {
     return (
@@ -11,7 +12,7 @@ export default function Blog() {
                 breadcrumbs={[{label: "Forside", to: "/"}, {label: "BLOG ARKIV"}]}
             />
             <main>
-
+                <BlogList />
             </main>
         </div>
     )

@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom"
 import SectionHeader from "../../sectionHeader/SectionHeader"
 import styles from "./latestBlogSection.module.css"
 import BlogCard from "../blogCard/BlogCard"
+import { formatTime } from "../../../utils/timeFormatter"
 
 export default function LatestBlogSection() {
 
@@ -21,18 +22,6 @@ export default function LatestBlogSection() {
 
     const latest = findLatest(blogs)
 
-    function formatTime(timeString) {
-        const stringToFormat = new Date(timeString)
-
-        const formatted = stringToFormat.toLocaleDateString("da-DK", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-
-        })
-
-        return formatted
-    }
     
     return (
         <div className={styles.wrapper}>

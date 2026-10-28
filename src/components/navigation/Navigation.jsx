@@ -1,5 +1,5 @@
 import styles from "./navigation.module.css"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { useState } from "react"
 import logo from "../../assets/logo.png"
 
@@ -7,6 +7,7 @@ export default function Navigation() {
     const [isOpen, setOpen] = useState(false)
 
     const pathname = window.location.pathname
+
 
 
     return(
@@ -21,14 +22,15 @@ export default function Navigation() {
                     <div className={styles.bar}></div>
                 </div>
               <nav onClick={() => setOpen((prev) => !prev)} className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
-                <Link 
-                className={`${styles.navLink} ${pathname === "/" && styles.active}`} to="/">
+                <NavLink 
+                end
+                className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/">
                   FORSIDE
-                </Link>
-                <Link 
-                className={`${styles.navLink} ${pathname === "/blogs" && styles.active}`} to="/blogs">
+                </NavLink>
+                <NavLink 
+                className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/blogs">
                   BLOG
-                </Link>
+                </NavLink>
               </nav>
             </div>
 
