@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.infoLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.iconWrapper {
+    font-size: 30px;
+    line-height: 0;
+}
+
+.lineText {
+    font-family: var(--body);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (min-width: 900px) {
+
+}

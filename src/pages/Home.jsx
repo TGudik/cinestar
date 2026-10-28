@@ -5,6 +5,7 @@ import Portfolio from "../components/portfolio/Portfolio";
 import ServiceSection from "../components/serviceSection/ServiceSection";
 import HistorySection from "../components/historySection/HistorySection";
 import TestimonialsSection from "../components/testimonialsSection/TestimonialsSection";
+import ContactSection from "../components/contactSection/ContactSection";
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
             <ServiceSection />
             <HistorySection />
             <TestimonialsSection />
+            <ContactSection />
         </main>
       </div>
     );
