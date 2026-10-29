@@ -13,6 +13,9 @@ import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
 
 import { blogById, blogLoader, faqLoader, homeLoader } from "./loaders/DataLoaders";
+import Login from "./pages/Login";
+import ProtectedRoute from "./components/backoffice/protectedRoute/ProtectedRoute";
+import Backoffice from "./pages/backoffice/Backoffice";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +24,11 @@ const routes = createBrowserRouter(
       <Route path="blogs" element={<Blog />} loader={blogLoader}/>
       <Route path="blogs/:id" element={<SingleBlog />} loader={blogById} />
       <Route path="faq" element={<Faq />} loader={faqLoader}/>
-      <Route path="/kontakt" element={<Contact />} />
+      <Route path="kontakt" element={<Contact />} />
+      <Route path="login" element={<Login />} />
+      <Route path="backoffice" element={<ProtectedRoute />}>
+        <Route index element={<Backoffice />}/>
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
   ),

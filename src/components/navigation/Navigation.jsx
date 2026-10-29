@@ -2,12 +2,12 @@ import styles from "./navigation.module.css"
 import { Link, NavLink } from "react-router-dom"
 import { useState } from "react"
 import logo from "../../assets/logo.png"
+import { useAuth } from "../../context/AuthContext"
 
 export default function Navigation() {
     const [isOpen, setOpen] = useState(false)
 
-    const pathname = window.location.pathname
-
+    const { user, logout } = useAuth()
 
 
     return(
@@ -39,6 +39,18 @@ export default function Navigation() {
                 className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/kontakt">
                   KONTAKT
                 </NavLink>
+                { user 
+                ? (
+                  <NavLink className={styles.navLink} onClick={logout}>
+                    LOG UD
+                  </NavLink>
+                )
+                :(
+                  <NavLink className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/login">
+                    LOGIN
+                  </NavLink>
+                )
+                  }
               </nav>
             </div>
 
