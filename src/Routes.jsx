@@ -4,7 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import AppLayout from "./components/appLayout/AppLayout";
-import Loading from "./components/loading/Loading";
+import Loading from "./components/siteComponents/loading/Loading";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
@@ -16,6 +16,7 @@ import { blogById, blogLoader, faqLoader, homeLoader } from "./loaders/DataLoade
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/backoffice/protectedRoute/ProtectedRoute";
 import Backoffice from "./pages/backoffice/Backoffice";
+import BackofficeBlog from "./pages/backoffice/BackofficeBlog";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const routes = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="backoffice" element={<ProtectedRoute />}>
         <Route index element={<Backoffice />}/>
+        <Route path="blogs" element={<BackofficeBlog />} loader={blogLoader}/>
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>

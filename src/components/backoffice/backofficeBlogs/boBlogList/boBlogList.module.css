@@ -1,0 +1,16 @@
+.tableHeader{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.column {
+    padding: 5px 20px;
+    border: 1px solid var(--accent);
+    background: #f071322d;
+}
+
+.heading {
+    color: white;
+    font-family: var(--heading);
+    font-size: 20px;
+}

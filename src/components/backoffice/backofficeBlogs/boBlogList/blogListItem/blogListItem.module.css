@@ -1,0 +1,44 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.column {
+    padding: 10px 20px;
+    border: 1px solid var(--accent);
+    max-height: 200px;
+}
+
+.listImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.listText {
+    font-family: var(--body);
+    color: white;
+    overflow-y: scroll;
+    max-height: 150px;
+    padding: 10px;
+}
+
+.column.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20;
+}
+
+.listBtn {
+    padding: 12px 20px;
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.listBtn:hover {
+    border-color: white;
+    color: white;
+}

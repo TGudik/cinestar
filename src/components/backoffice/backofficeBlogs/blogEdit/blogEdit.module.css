@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-family: var(--body);
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header {
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+}
+.inputWrapper {
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 20px;
+    background: none ;
+    border: 1px solid var(--accent);
+    color: white;
+    font-family: var(--body);
+    font-size: 15px;
+}
+
+.submitBtn {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 15px 40px;
+}
+
+.submitBtn:hover {
+    color: white;
+    border-color: white;
+}
+
+.error {
+    color: var(--accent);
+}

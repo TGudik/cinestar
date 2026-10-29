@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import Navigation from "../navigation/Navigation";
-import Footer from "../footer/Footer";
+import Navigation from "../siteComponents/navigation/Navigation";
+import Footer from "../siteComponents/footer/Footer";
 
 export default function AppLayout() {
   return (

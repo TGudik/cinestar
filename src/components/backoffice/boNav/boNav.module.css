@@ -1,0 +1,29 @@
+.wrapper {
+    background: #000;
+    color: white;
+    font-family: var(--body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px
+    ;
+    min-height: 50vh;
+    padding: 100px 20px;
+}
+
+.sectionTitle {
+    margin-bottom: 60px;
+}
+
+.navLink {
+    border: 1px solid var(--accent);
+    padding: 15px 50px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navLink:hover {
+    border-color: white;
+    color: white;
+}
