@@ -16,6 +16,14 @@ const blogsLoader = async () => {
     return data
 }
 
+const faqsLoader = async () => {
+    const res = await fetch(`${apiUrl}/faqs`)
+    if (!res.ok) throw new Response("Fejl i at hente retter", {status: res.status})
+    const preData = await res.json()
+    const data = preData.data
+    return data
+}
+
 
 
 export const homeLoader = async () => {
@@ -37,6 +45,16 @@ export const blogLoader = async () => {
 
     return {
         blogs
+    }
+}
+
+export const faqLoader = async () => {
+    const [faqs] = await Promise.all([
+        faqsLoader()
+    ])
+
+    return {
+        faqs
     }
 }
 

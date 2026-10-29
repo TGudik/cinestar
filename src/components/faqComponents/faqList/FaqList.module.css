@@ -1,0 +1,12 @@
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+    .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    }
+}

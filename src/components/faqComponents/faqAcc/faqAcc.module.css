@@ -1,0 +1,50 @@
+.wrapper {
+    padding: 20px;
+    font-family: var(--body);
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    color: black;
+}
+
+.header.open {
+    background: var(--accent);
+    color: white;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+.iconWrapper {
+    font-size: 30px;
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+
+.iconWrapper.open {
+    transform: rotateX(180deg);
+}
+
+.body {
+    color: white;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.bodyWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.3s;
+    padding: 20px 10px;
+}
+
+.bodyWrapper.open {
+    grid-template-rows: 1fr;
+}

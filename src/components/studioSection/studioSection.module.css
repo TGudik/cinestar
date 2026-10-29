@@ -25,6 +25,8 @@
 .videoWrapper {
     position: relative;
     margin: 20px 0;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .video{

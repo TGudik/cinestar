@@ -32,6 +32,10 @@ export default function Navigation() {
                   BLOG
                 </NavLink>
                 <NavLink 
+                className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/faq">
+                  FAQ
+                </NavLink>
+                <NavLink 
                 className={({isActive}) => `${styles.navLink} ${isActive && styles.active}`} to="/kontakt">
                   KONTAKT
                 </NavLink>

@@ -20,6 +20,7 @@
     position: relative;
     z-index: 1;
     display: flex;
+    margin: 0 auto;
 }
 
 .input {
@@ -45,14 +46,32 @@
     outline: none;
 }
 
+.input:focus + .submitBtn {
+    border-color: white;
+    color: white;
+}
+
 .submitBtn {
     flex: 1;
     border-color: var(--accent);
     color: var(--accent);
 }
 
+
+
 .error {
     color: var(--accent);
     font-family: var(--body);
 
+}
+
+@media (min-width: 900px) {
+    .form {
+        max-width: 75%;
+    }
+
+    .input:focus + .submitBtn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
 }

@@ -23,6 +23,11 @@
     text-decoration: none;
 }
 
+.readMoreBtn:hover {
+    border-color: white;
+    color: white;
+}
+
 .blogImg {
     width: 100%;
 }
