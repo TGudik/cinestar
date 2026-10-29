@@ -4,6 +4,8 @@
     --heading: "Cormorant";
     --body: "Quicksand";
     --accent: #F07232;
+
+    overflow-x: hidden;
 }
 
 * {

@@ -24,11 +24,12 @@
 
 .row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
 }
 
 .iconWrapper {
-    font-size: 100px;
+    font-size: 40px;
     color: var(--accent);
 }
 

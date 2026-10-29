@@ -76,20 +76,21 @@
   z-index: -1;
   inset: auto 0 -1px 0;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--bg-color, #000));
+  background: linear-gradient(to bottom, #0000003f, #000);
 }
 
 .eyebrow {
   text-align: center;
   font-family: var(--body);
   font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 20px;
 }
 .headline {
   text-align: center;
   font-family: var(--heading);
   font-weight: 600;
-  margin-bottom: 10px;
+  font-size: clamp(28px, calc(20.248px + 1.988vw), 60px);
+  padding: 10px 0;
 }
 .highlight {
   color: #f07232;
@@ -98,8 +99,9 @@
 .body {
   text-align: center;
   font-family: var(--body);
-  padding: 10px 30px;
+  padding: 0 20px;
   max-width: 325px;
+  font-size: clamp(12px, calc(9.093px + 0.745vw), 24px);
 }
 
 .title {
@@ -136,7 +138,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 20px;
+        bottom: -6.5vw;
         flex-direction: row;
         justify-content: center;
         background: none;

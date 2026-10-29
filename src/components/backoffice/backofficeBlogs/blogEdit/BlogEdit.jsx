@@ -94,6 +94,7 @@ export default function BlogEdit({currentBlog, setCurrentBlog}) {
                     await addBlog(formData)
                 }
                 cancelEdit()
+                
             } catch (error) {
                 setError("root", {message: "Noget gik galt, prøv igen"})
             }

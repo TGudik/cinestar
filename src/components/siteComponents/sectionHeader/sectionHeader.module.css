@@ -1,5 +1,6 @@
 .wrapper {
     max-width: 1240px;
+    padding: 40px 0;
     margin: 0 auto;
 }
 
@@ -19,7 +20,7 @@
 
 .title {
     font-family: var(--heading);
-    font-size: clamp(32px, calc(27.818px + 0.686vw), 36px);
+    font-size: clamp(32px, calc(25.76px + 1.6vw), 44px);
     color: white;
     white-space: pre-wrap;
 }
@@ -28,8 +29,8 @@
     font-family: var(--body);
     color: white;
     font-weight: 500;
-    font-size: clamp(20px, calc(14.182px + 1.818vw), 36px);
+    font-size: clamp(18px, calc(16.062px + 0.497vw), 26px);
     line-height: clamp(27px, calc(21.545px + 1.705vw), 42px);
-    padding: 10px 0;
+    padding: 15px 0;
     
 }
