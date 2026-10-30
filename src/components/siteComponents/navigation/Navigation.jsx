@@ -8,7 +8,6 @@ export default function Navigation() {
   const [isOpen, setOpen] = useState(false);
 
   const { user, logout } = useAuth();
-  console.log(user)
 
   return (
     <div className={styles.navContainer}>
