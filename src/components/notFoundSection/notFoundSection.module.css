@@ -1,0 +1,32 @@
+.wrapper {
+    background: #000;
+    display: grid;
+    place-content: center;
+    min-height: 60vh;
+}
+
+.content {
+    font-family: var(--body);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconWrapper {
+    color: var(--accent);
+    font-size: 50px;
+}
+
+.oops {
+    color: var(--accent);
+}
+
+.btn {
+    border: 1px solid var(--accent);
+    padding: 15px 30px;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 30px;
+}
