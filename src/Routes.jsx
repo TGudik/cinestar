@@ -17,10 +17,11 @@ import Login from "./pages/Login";
 import ProtectedRoute from "./components/backoffice/protectedRoute/ProtectedRoute";
 import Backoffice from "./pages/backoffice/Backoffice";
 import BackofficeBlog from "./pages/backoffice/BackofficeBlog";
+import ErrorPage from "./pages/ErrorPage";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<AppLayout />} hydrateFallbackElement={<Loading />}>
+    <Route element={<AppLayout />} errorElement={<ErrorPage />} hydrateFallbackElement={<Loading />}>
       <Route index element={<Home />} loader={homeLoader  }/>
       <Route path="blogs" element={<Blog />} loader={blogLoader}/>
       <Route path="blogs/:id" element={<SingleBlog />} loader={blogById} />

@@ -5,16 +5,15 @@ import NotFoundSection from "../components/notFoundSection/NotFoundSection";
 export default function NotFound() {
 
     return (
-        <div>
-            <Hero 
-                variant="page"
-                image={heroImg}
-                title={"Siden findes ikke"}
-
-            />
-            <main>
-                <NotFoundSection />
-            </main>
-        </div>
-    )
+      <div>
+        <Hero variant="page" image={heroImg} title={"Siden findes ikke"} />
+        <main>
+          <NotFoundSection
+            title={"Hov! den side findes vist ikke..."}
+            text={"Gå tilbage til forsiden eller tjek URL'en"}
+            btn
+          />
+        </main>
+      </div>
+    );
 }
