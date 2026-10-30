@@ -14,6 +14,10 @@
     gap: 10px;
 }
 
+.img {
+    max-width: 70vw;
+}
+
 .iconWrapper {
     color: var(--accent);
     font-size: 50px;
