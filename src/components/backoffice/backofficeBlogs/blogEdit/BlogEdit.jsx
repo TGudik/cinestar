@@ -4,8 +4,6 @@ import * as yup from "yup"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useFetchBlogs } from "../../../../hooks/useFetchBlogs";
-import { useSubscriptions } from "../../../../hooks/useSubscription";
-import { useMail } from "../../../../hooks/useMail";
 
 const emptyForm = {
     title: "",
@@ -134,7 +132,6 @@ export default function BlogEdit({currentBlog, setCurrentBlog}) {
               onChange={(e) => {
                 setValue("image", e.target.files?.[0] ?? null, {
                   shouldValidate: true,
-                  shouldDirty: true,
                 });
               }}
             />
@@ -162,7 +159,6 @@ export default function BlogEdit({currentBlog, setCurrentBlog}) {
               {...register("description")}
               className={styles.input}
               placeholder="Beskrivelse"
-              type="text"
             />
             {errors.description && (
               <p className={styles.error}>{errors.description.message}</p>
