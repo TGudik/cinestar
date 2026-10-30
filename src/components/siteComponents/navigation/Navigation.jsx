@@ -8,6 +8,7 @@ export default function Navigation() {
   const [isOpen, setOpen] = useState(false);
 
   const { user, logout } = useAuth();
+  console.log(user)
 
   return (
     <div className={styles.navContainer}>
@@ -60,14 +61,14 @@ export default function Navigation() {
           >
             KONTAKT
           </NavLink>
-          <NavLink
+          { user?.role === "admin" && <NavLink
             className={({ isActive }) =>
               `${styles.navLink} ${isActive && styles.active}`
             }
             to="/backoffice"
           >
             BACKOFFICE
-          </NavLink>
+          </NavLink>}
           {user ? (
             <NavLink className={styles.navLink} onClick={logout}>
               LOG UD
