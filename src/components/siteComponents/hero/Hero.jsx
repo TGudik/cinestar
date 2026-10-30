@@ -3,6 +3,7 @@ import styles from "./hero.module.css";
 import award1 from "../../../assets/awards/award1.png"
 import award2 from "../../../assets/awards/award2.png"
 import award3 from "../../../assets/awards/award3.png"
+import { useSubscriptions } from "../../../hooks/useSubscription";
 
 export default function Hero({
   variant = "page", 
@@ -13,7 +14,7 @@ export default function Hero({
   body, 
   breadcrumbs = [], 
 }) {
-  const isHome = variant === "home";
+  const isHome = variant === "home";3
 
   return (
     <section

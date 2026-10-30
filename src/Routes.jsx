@@ -4,7 +4,7 @@ import {
   Route,
 } from "react-router-dom";
 import AppLayout from "./components/appLayout/AppLayout";
-import Loading from "./components/siteComponents/loading/Loading";
+import Loading from "./components/loading/Loading";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";

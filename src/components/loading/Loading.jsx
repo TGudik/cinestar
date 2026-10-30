@@ -1,5 +1,5 @@
 import styles from "./loading.module.css"
-import logo from "../../../assets/logo.png"
+import logo from "../../assets/logo.png"
 import { useEffect, useState } from "react"
 
 export default function Loading() {
