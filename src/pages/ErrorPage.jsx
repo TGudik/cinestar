@@ -8,7 +8,8 @@ export default function ErrorPage() {
     return (
         <NotFoundSection
             title={"Noget gik galt"}
-            body={error?.message || "Der opstod en ukendt fejl"}
+            text={"Der opstod en ukendt fejl, besøg os igen senere"}
+
         />
     )
 }

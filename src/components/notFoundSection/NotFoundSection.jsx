@@ -8,9 +8,9 @@ export default function NotFoundSection( {title, text, btn} ) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
+                <img className={styles.img} src={logo} alt="" />
                 <div className={styles.iconWrapper}><QuestionCircleFill /></div>
                 <h2 className={styles.oops}>{title}</h2>
-                <img className={styles.img} src={logo} alt="" />
                 <p className={styles.body}>{text}</p>
                 {btn && <Link className={styles.btn} to={"/"}>Til Forsiden</Link>}
             </div>

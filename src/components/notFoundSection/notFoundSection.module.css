@@ -27,6 +27,13 @@
     color: var(--accent);
 }
 
+.body {
+    max-width: 70vw;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .btn {
     border: 1px solid var(--accent);
     padding: 15px 30px;
